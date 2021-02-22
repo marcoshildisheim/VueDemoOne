@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Demo comments app</title>
+
+        <link rel="stylesheet" href="index.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+        <script src="https://unpkg.com/vue@next"></script> 
+        <script src="index.js"></script> 
+        
+    </head>
+
+<body>   
+    <div id="app">
+        <img src="IMG-2565.jpg" class="main-photo">
+        <img src="IMG-2610.JPG" class="main-profile">
+        <div class="main-info">
+            <span class="name">Eligia</span>
+            <h3>Connected to the source.</h3>
+        </div>
+        <hr>
+        <ul>
+            <individual-comment
+                v-for="comment in comments"
+                :key="comment"
+                :commentpost="comment"
+            >
+            </individual-comment>
+        </ul>
+        <input
+            v-model="newComment"
+            @keyup.enter="addComment"
+            placeholder="Enter a comment"
+        >
+    </div>
+
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+
+</body> 
+</html>
