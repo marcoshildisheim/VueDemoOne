@@ -3,10 +3,9 @@ const app = Vue.createApp({
         return {
             newComment: '',
             comments: [
-                'Hello! Check out this vue.js demo deaturing the following features:',
-                'Virtual DOM',
-                'Dynamic Binding',
-                '& Components'
+                'That is really interesting!',
+                'Wow....',
+                'What is this?'
             ]
         }
     },
